@@ -4,12 +4,12 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Ignore virtual environment (Change 'venv' to 'myenv' since your environment is named 'myenv')
+# Ignore virtual environment
 myenv/
 
 # Ignore dynamically generated files
 uploads/user_uploaded.csv
 trained_model.pkl
 
-# Ignore environment variables file (if used)
+# Ignore environment variables file
 .env

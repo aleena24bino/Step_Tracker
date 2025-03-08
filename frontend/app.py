@@ -4,6 +4,8 @@ import pandas as pd
 import time
 import io
 
+API_URL = "https://step-tracker-3n9x.onrender.com/"
+
 st.markdown(
     """
     <style>
@@ -20,7 +22,7 @@ st.markdown(
 st.title("📊 Step Count Prediction System")
 
 
-# 📂 File Uploader
+# File Uploader
 uploaded_file = st.file_uploader("Upload a CSV file (Date,StepCount)", type=["csv"])
 
 if uploaded_file:
@@ -30,7 +32,7 @@ if uploaded_file:
 
     if st.button("Train Model"):
         files = {"file": uploaded_file.getvalue()}
-        response = requests.post("http://127.0.0.1:5000/upload_csv", files=files)
+        response = requests.post(f"{API_URL}/upload_csv", files=files)
 
         if response.status_code == 200:
             st.success("✅ Model training started!")
@@ -39,7 +41,7 @@ if uploaded_file:
             training_complete = False
             while not training_complete:
                 time.sleep(2)  
-                status_response = requests.get("http://127.0.0.1:5000/training_status")
+                status_response = requests.get(f"{API_URL}/training_status")
 
                 if status_response.status_code == 200:
                     status = status_response.json()["status"]
@@ -63,7 +65,7 @@ def get_sample_csv():
     sample_data.to_csv(csv_buffer, index=False)
     return csv_buffer.getvalue()
 
-# Add a download button for the sample CSV
+# Download button for the sample CSV
 st.download_button(
     label="Download Sample CSV",
     data=get_sample_csv(),
@@ -72,21 +74,21 @@ st.download_button(
 )
 
 
-# 📊 Display Weekly & Monthly Trends
+# Display Weekly & Monthly Trends
 st.header("📈 Step Count Trends")
 if st.button("Show Weekly Trend"):
-    st.image("http://127.0.0.1:5000/weekly_trend", caption="Weekly Step Count Trend")
+    st.image("f{API_URL}/weekly_trend", caption="Weekly Step Count Trend")
 
 if st.button("Show Monthly Trend"):
-    st.image("http://127.0.0.1:5000/monthly_trend", caption="Monthly Step Count Trend")
+    st.image(f"{API_URL}/monthly_trend", caption="Monthly Step Count Trend")
 
-# 🎯 Prediction Section
+# Prediction Section
 st.header("🔮 Predict Future Step Count")
 date_input = st.date_input("Select a date for prediction")
 
 
 if st.button("Predict Steps"):
-    response = requests.post("http://127.0.0.1:5000/predict", json={"date": str(date_input)})
+    response = requests.post(f"{API_URL}/predict", json={"date": str(date_input)})
 
     if response.status_code == 200:
         result = response.json()
@@ -98,7 +100,7 @@ if st.button("Predict Steps"):
 
 
 if st.button("🗑️ Clear Data Before Exit"):
-    response = requests.post("http://127.0.0.1:5000/clear_data")
+    response = requests.post(f"{API_URL}/clear_data")
     if response.status_code == 200:
         st.success("✅ All uploaded data has been cleared!")
 

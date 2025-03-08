@@ -25,3 +25,23 @@ The system uses Flask to handle backend processing and Streamlit for an interact
 **Backend**: Flask <br>
 **Database**: Local CSV Storage <br>
 **Deployment**: Render <br>
+
+# Screenshots
+
+![Screenshot (1055)](https://github.com/user-attachments/assets/7b00d88f-2741-4a32-afec-e6de6fc48afb)
+
+
+![Screenshot (1056)](https://github.com/user-attachments/assets/890e2853-ffff-4cf5-9560-799a83b493e0)
+
+
+![Screenshot (1057)](https://github.com/user-attachments/assets/0941693f-4c87-4ce8-891b-7ccd532c9250)
+
+
+![Screenshot (1058)](https://github.com/user-attachments/assets/46855c43-d8f6-4f74-9a13-8a34edd583b7)
+
+
+![Screenshot (1059)](https://github.com/user-attachments/assets/2dba9f21-3d62-4289-9133-22913de0673e)
+
+
+![Screenshot (1061)](https://github.com/user-attachments/assets/c54f1dc3-a3b9-486f-b37b-f246b9c0400c)
+

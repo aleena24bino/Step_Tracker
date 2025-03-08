@@ -27,7 +27,7 @@ The system uses Flask to handle backend processing and Streamlit for an interact
 **Deployment**: Render <br>
 
 ## Deployment Link
-Frontend: https://step-tracker-frontend.onrender.com/
+Frontend: https://step-tracker-frontend.onrender.com/   <br>
 Backend Server: https://step-tracker-backend.onrender.com/
 
 *Note*: Run the backend server first (click the Backend Server link first) followed by the Fontend (click the Frontend link) for a smooth operation.  
@@ -50,4 +50,8 @@ Backend Server: https://step-tracker-backend.onrender.com/
 
 
 ![Screenshot (1061)](https://github.com/user-attachments/assets/c54f1dc3-a3b9-486f-b37b-f246b9c0400c)
+
+
+## Demo Video Link
+https://youtu.be/PxjL-AeDtMc
 

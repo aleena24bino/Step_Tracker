@@ -15,4 +15,13 @@ The system uses Flask to handle backend processing and Streamlit for an interact
 
 
 ## Technologies Used
-### Machine Learning & AI:
+**Machine Learning & AI:**
+- Frameworks/Libraries: Scikit-Learn,Pandas
+- Programming Language: Python
+- Data Handling: Pandas
+- Data Visualization: Matplotlib
+
+**Frontend**: Streamlit <br>
+**Backend**: Flask <br>
+**Database**: Local CSV Storage <br>
+**Deployment**: Render <br>

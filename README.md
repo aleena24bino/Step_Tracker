@@ -26,6 +26,7 @@ The system uses Flask to handle backend processing and Streamlit for an interact
 **Database**: Local CSV Storage <br>
 **Deployment**: Render <br>
 
+
 ## Screenshots
 
 ![Screenshot (1055)](https://github.com/user-attachments/assets/7b00d88f-2741-4a32-afec-e6de6fc48afb)
@@ -54,3 +55,43 @@ Backend Server: https://step-tracker-backend.onrender.com/
 ## Demo Video Link
 https://youtu.be/PxjL-AeDtMc
 
+## Project Structure
+
+Step_Tracker/<br>
+│── backend/  
+│   ├── backend.py          <br>
+│   ├── requirements.txt      
+│   ├── uploads/              
+│   ├── static/              
+│── frontend/  
+│   ├── app.py                
+│   ├── requirements.txt      
+│── .gitignore  
+│── README.md  
+
+## To run locally
+1. Clone the repository
+ ```
+    git clone https://github.com/aleena24bino/Step_Tracker.git
+   ```
+2. Install the dependencies
+ ```
+    pip install -r requirements.txt
+   ```
+3. Run the backend (Flask) in one terminal
+ ```
+    cd backend
+   ```
+
+ ```
+    python backend.py
+   ```
+4. Run the frontend (Streamlit) in another terminal
+
+ ```
+    cd frontend
+   ```
+
+ ```
+    streamlit run app.py
+   ```

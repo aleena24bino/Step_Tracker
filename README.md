@@ -12,3 +12,7 @@ Maintaining a healthy lifestyle requires tracking physical activity.<br> This St
 ✅ Manage data efficiently by clearing uploaded records<br>
 
 The system uses Flask to handle backend processing and Streamlit for an interactive frontend experience.
+
+
+## Technologies Used
+### Machine Learning & AI:
